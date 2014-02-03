@@ -1,0 +1,7 @@
+<h1>Results </h1>
+	<p> Results : </p>
+		<ul>
+		  <% FOR result IN results %>
+  		  <li><a href="#"> <% result.volumeInfo.title %> </a></li>
+		  <% END %>  
+		</ul>

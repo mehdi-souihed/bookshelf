@@ -1,0 +1,643 @@
+$VAR1 = [
+          {
+            'etag' => '/JKaigNRB/A',
+            'accessInfo' => {
+                              'country' => 'FR',
+                              'textToSpeechPermission' => 'ALLOWED',
+                              'quoteSharingAllowed' => bless( do{\(my $o = 0)}, 'JSON::PP::Boolean' ),
+                              'webReaderLink' => 'http://books.google.fr/books/reader?id=8_DfMSS9r9cC&hl=&printsec=frontcover&output=reader&source=gbs_api',
+                              'pdf' => {
+                                         'isAvailable' => $VAR1->[0]{'accessInfo'}{'quoteSharingAllowed'}
+                                       },
+                              'publicDomain' => $VAR1->[0]{'accessInfo'}{'quoteSharingAllowed'},
+                              'accessViewStatus' => 'SAMPLE',
+                              'viewability' => 'PARTIAL',
+                              'epub' => {
+                                          'isAvailable' => $VAR1->[0]{'accessInfo'}{'quoteSharingAllowed'}
+                                        },
+                              'embeddable' => bless( do{\(my $o = 1)}, 'JSON::PP::Boolean' )
+                            },
+            'volumeInfo' => {
+                              'industryIdentifiers' => [
+                                                         {
+                                                           'identifier' => '0521565103',
+                                                           'type' => 'ISBN_10'
+                                                         },
+                                                         {
+                                                           'identifier' => '9780521565103',
+                                                           'type' => 'ISBN_13'
+                                                         }
+                                                       ],
+                              'contentVersion' => '1.0.0.0.preview.1',
+                              'publisher' => 'Cambridge University Press',
+                              'canonicalVolumeLink' => 'http://books.google.fr/books/about/Diversity_and_Evolutionary_Biology_of_Tr.html?hl=&id=8_DfMSS9r9cC',
+                              'imageLinks' => {
+                                                'thumbnail' => 'http://bks7.books.google.fr/books?id=8_DfMSS9r9cC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api',
+                                                'smallThumbnail' => 'http://bks7.books.google.fr/books?id=8_DfMSS9r9cC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api'
+                                              },
+                              'language' => 'en',
+                              'ratingsCount' => 1,
+                              'infoLink' => 'http://books.google.fr/books?id=8_DfMSS9r9cC&dq=flowers&hl=&source=gbs_api',
+                              'publishedDate' => '1996-07-25',
+                              'categories' => [
+                                                'Nature'
+                                              ],
+                              'previewLink' => 'http://books.google.fr/books?id=8_DfMSS9r9cC&printsec=frontcover&dq=flowers&hl=&cd=1&source=gbs_api',
+                              'description' => 'A unique account of the structure, biology and evolution of tropical flowering plants.',
+                              'printType' => 'BOOK',
+                              'pageCount' => 511,
+                              'title' => 'Diversity and Evolutionary Biology of Tropical Flowers',
+                              'averageRating' => '5'
+                            },
+            'selfLink' => 'https://www.googleapis.com/books/v1/volumes/8_DfMSS9r9cC',
+            'kind' => 'books#volume',
+            'id' => '8_DfMSS9r9cC',
+            'searchInfo' => {
+                              'textSnippet' => 'This volume concentrates on tropical flowers in which, whilst sharing many of the features seen in temperate flowers, exhibit phenomena which are purely tropical.'
+                            },
+            'saleInfo' => {
+                            'country' => 'FR',
+                            'saleability' => 'NOT_FOR_SALE',
+                            'isEbook' => $VAR1->[0]{'accessInfo'}{'quoteSharingAllowed'}
+                          }
+          },
+          {
+            'etag' => 'TXX8z+UZUGw',
+            'accessInfo' => {
+                              'country' => 'FR',
+                              'textToSpeechPermission' => 'ALLOWED',
+                              'quoteSharingAllowed' => $VAR1->[0]{'accessInfo'}{'quoteSharingAllowed'},
+                              'webReaderLink' => 'http://books.google.fr/books/reader?id=Zyp37sqimpkC&hl=&printsec=frontcover&output=reader&source=gbs_api',
+                              'pdf' => {
+                                         'isAvailable' => $VAR1->[0]{'accessInfo'}{'quoteSharingAllowed'}
+                                       },
+                              'publicDomain' => $VAR1->[0]{'accessInfo'}{'quoteSharingAllowed'},
+                              'accessViewStatus' => 'SAMPLE',
+                              'viewability' => 'PARTIAL',
+                              'epub' => {
+                                          'isAvailable' => $VAR1->[0]{'accessInfo'}{'quoteSharingAllowed'}
+                                        },
+                              'embeddable' => $VAR1->[0]{'accessInfo'}{'embeddable'}
+                            },
+            'volumeInfo' => {
+                              'industryIdentifiers' => [
+                                                         {
+                                                           'identifier' => '1579907466',
+                                                           'type' => 'ISBN_10'
+                                                         },
+                                                         {
+                                                           'identifier' => '9781579907464',
+                                                           'type' => 'ISBN_13'
+                                                         }
+                                                       ],
+                              'contentVersion' => '1.1.1.0.preview.1',
+                              'publisher' => 'Lark Books',
+                              'canonicalVolumeLink' => 'http://books.google.fr/books/about/The_Art_of_French_Beaded_Flowers.html?hl=&id=Zyp37sqimpkC',
+                              'authors' => [
+                                             'Carol Benner Doelp'
+                                           ],
+                              'imageLinks' => {
+                                                'thumbnail' => 'http://bks8.books.google.fr/books?id=Zyp37sqimpkC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api',
+                                                'smallThumbnail' => 'http://bks8.books.google.fr/books?id=Zyp37sqimpkC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api'
+                                              },
+                              'language' => 'en',
+                              'infoLink' => 'http://books.google.fr/books?id=Zyp37sqimpkC&dq=flowers&hl=&source=gbs_api',
+                              'ratingsCount' => 1,
+                              'publishedDate' => '2005-09-01',
+                              'categories' => [
+                                                'Crafts & Hobbies'
+                                              ],
+                              'previewLink' => 'http://books.google.fr/books?id=Zyp37sqimpkC&printsec=frontcover&dq=flowers&hl=&cd=2&source=gbs_api',
+                              'description' => 'New in Paper French beading is a simple yet lovely art, beautifully described here and illustrated in color with more than 70 close-up, how-to photos that show the intracacies of growing a garden of 30 flowers with delicate seed beads. Forty additional illustrations present the exact bead placement for each particular flower part. Just string the beads on wires and bend them into realistic, three-dimensional shapes; a helpful introductory section covers all the basics. You can indulge your creative passion almost anywhere--and the nicest thing is, they last forever. Construct a budding dogwood branch, frame a mirror with wisteria blooms, or make a holiday wreath of holly and gold-tipped pinecones. A gallery of vintage pieces illustrates the rich history of the craft.',
+                              'printType' => 'BOOK',
+                              'subtitle' => 'Creative Techniques for Making 30 Beautiful Blooms',
+                              'pageCount' => 128,
+                              'title' => 'The Art of French Beaded Flowers',
+                              'averageRating' => '5'
+                            },
+            'selfLink' => 'https://www.googleapis.com/books/v1/volumes/Zyp37sqimpkC',
+            'kind' => 'books#volume',
+            'id' => 'Zyp37sqimpkC',
+            'searchInfo' => {
+                              'textSnippet' => 'New in Paper French beading is a simple yet lovely art, beautifully described here and illustrated in color with more than 70 close-up, how-to photos that show the intracacies of growing a garden of 30 flowers with delicate seed beads.'
+                            },
+            'saleInfo' => {
+                            'country' => 'FR',
+                            'saleability' => 'NOT_FOR_SALE',
+                            'isEbook' => $VAR1->[0]{'accessInfo'}{'quoteSharingAllowed'}
+                          }
+          },
+          {
+            'etag' => 'OL+YEkKisGU',
+            'accessInfo' => {
+                              'country' => 'FR',
+                              'textToSpeechPermission' => 'ALLOWED',
+                              'quoteSharingAllowed' => $VAR1->[0]{'accessInfo'}{'quoteSharingAllowed'},
+                              'webReaderLink' => 'http://books.google.fr/books/reader?id=EicYUOA8OBQC&hl=&printsec=frontcover&output=reader&source=gbs_api',
+                              'pdf' => {
+                                         'isAvailable' => $VAR1->[0]{'accessInfo'}{'embeddable'},
+                                         'acsTokenLink' => 'http://books.google.fr/books/download/Swampland_Flowers-sample-pdf.acsm?id=EicYUOA8OBQC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api'
+                                       },
+                              'publicDomain' => $VAR1->[0]{'accessInfo'}{'quoteSharingAllowed'},
+                              'accessViewStatus' => 'SAMPLE',
+                              'viewability' => 'PARTIAL',
+                              'epub' => {
+                                          'isAvailable' => $VAR1->[0]{'accessInfo'}{'embeddable'},
+                                          'acsTokenLink' => 'http://books.google.fr/books/download/Swampland_Flowers-sample-epub.acsm?id=EicYUOA8OBQC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api'
+                                        },
+                              'embeddable' => $VAR1->[0]{'accessInfo'}{'embeddable'}
+                            },
+            'volumeInfo' => {
+                              'industryIdentifiers' => [
+                                                         {
+                                                           'identifier' => '1590303180',
+                                                           'type' => 'ISBN_10'
+                                                         },
+                                                         {
+                                                           'identifier' => '9781590303184',
+                                                           'type' => 'ISBN_13'
+                                                         }
+                                                       ],
+                              'contentVersion' => '0.1.2.0.preview.3',
+                              'publisher' => 'Shambhala Publications',
+                              'canonicalVolumeLink' => 'http://books.google.fr/books/about/Swampland_Flowers.html?hl=&id=EicYUOA8OBQC',
+                              'authors' => [
+                                             'Zonggao'
+                                           ],
+                              'imageLinks' => {
+                                                'thumbnail' => 'http://bks1.books.google.fr/books?id=EicYUOA8OBQC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api',
+                                                'smallThumbnail' => 'http://bks1.books.google.fr/books?id=EicYUOA8OBQC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api'
+                                              },
+                              'language' => 'en',
+                              'infoLink' => 'http://books.google.fr/books?id=EicYUOA8OBQC&dq=flowers&hl=&source=gbs_api',
+                              'ratingsCount' => 3,
+                              'publishedDate' => '2006',
+                              'categories' => [
+                                                'Religion'
+                                              ],
+                              'previewLink' => 'http://books.google.fr/books?id=EicYUOA8OBQC&printsec=frontcover&dq=flowers&hl=&cd=3&source=gbs_api',
+                              'description' => 'The writings of the twelfth-century Chinese Zen master are presented in a selection of letters, sermons, and lectures that cover a variety of subjects that emphasize the ways in which Zen can be learned and the liberation promised by the Buddha can be achieved. Original.',
+                              'printType' => 'BOOK',
+                              'subtitle' => 'The Letters and Lectures of Zen Master Ta Hui',
+                              'pageCount' => 125,
+                              'title' => 'Swampland Flowers',
+                              'averageRating' => '5'
+                            },
+            'selfLink' => 'https://www.googleapis.com/books/v1/volumes/EicYUOA8OBQC',
+            'kind' => 'books#volume',
+            'id' => 'EicYUOA8OBQC',
+            'searchInfo' => {
+                              'textSnippet' => 'The writings of the twelfth-century Chinese Zen master are presented in a selection of letters, sermons, and lectures that cover a variety of subjects that emphasize the ways in which Zen can be learned and the liberation promised by the ...'
+                            },
+            'saleInfo' => {
+                            'country' => 'FR',
+                            'saleability' => 'NOT_FOR_SALE',
+                            'isEbook' => $VAR1->[0]{'accessInfo'}{'quoteSharingAllowed'}
+                          }
+          },
+          {
+            'etag' => 'aLO3dV+mECs',
+            'accessInfo' => {
+                              'country' => 'FR',
+                              'textToSpeechPermission' => 'ALLOWED',
+                              'quoteSharingAllowed' => $VAR1->[0]{'accessInfo'}{'quoteSharingAllowed'},
+                              'webReaderLink' => 'http://books.google.fr/books/reader?id=2bCdaZ7KvDsC&hl=&printsec=frontcover&output=reader&source=gbs_api',
+                              'pdf' => {
+                                         'isAvailable' => $VAR1->[0]{'accessInfo'}{'embeddable'},
+                                         'downloadLink' => 'http://books.google.fr/books/download/The_Language_of_Flowers.pdf?id=2bCdaZ7KvDsC&hl=&output=pdf&sig=ACfU3U1n9agbciLzFXS4cd_vmKAJsTiEZA&source=gbs_api'
+                                       },
+                              'publicDomain' => $VAR1->[0]{'accessInfo'}{'embeddable'},
+                              'accessViewStatus' => 'FULL_PUBLIC_DOMAIN',
+                              'viewability' => 'ALL_PAGES',
+                              'epub' => {
+                                          'isAvailable' => $VAR1->[0]{'accessInfo'}{'embeddable'},
+                                          'downloadLink' => 'http://books.google.fr/books/download/The_Language_of_Flowers.epub?id=2bCdaZ7KvDsC&hl=&output=epub&source=gbs_api'
+                                        },
+                              'embeddable' => $VAR1->[0]{'accessInfo'}{'embeddable'}
+                            },
+            'volumeInfo' => {
+                              'authors' => [
+                                             'Henrietta Dumont'
+                                           ],
+                              'imageLinks' => {
+                                                'thumbnail' => 'http://bks0.books.google.fr/books?id=2bCdaZ7KvDsC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api',
+                                                'smallThumbnail' => 'http://bks0.books.google.fr/books?id=2bCdaZ7KvDsC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api'
+                                              },
+                              'language' => 'en',
+                              'infoLink' => 'http://books.google.fr/books?id=2bCdaZ7KvDsC&dq=flowers&hl=&source=gbs_api',
+                              'industryIdentifiers' => [
+                                                         {
+                                                           'identifier' => 'HARVARD:32044013658547',
+                                                           'type' => 'OTHER'
+                                                         }
+                                                       ],
+                              'publishedDate' => '1852',
+                              'previewLink' => 'http://books.google.fr/books?id=2bCdaZ7KvDsC&printsec=frontcover&dq=flowers&hl=&cd=4&source=gbs_api',
+                              'categories' => [
+                                                'Flower language'
+                                              ],
+                              'printType' => 'BOOK',
+                              'subtitle' => 'The Floral Offering: a Token of Affection and Esteem; Comprising the Language and Poetry of Flowers ...',
+                              'contentVersion' => '0.0.1.0.full.3',
+                              'title' => 'The Language of Flowers',
+                              'pageCount' => 300,
+                              'canonicalVolumeLink' => 'http://books.google.fr/books/about/The_Language_of_Flowers.html?hl=&id=2bCdaZ7KvDsC'
+                            },
+            'selfLink' => 'https://www.googleapis.com/books/v1/volumes/2bCdaZ7KvDsC',
+            'kind' => 'books#volume',
+            'id' => '2bCdaZ7KvDsC',
+            'saleInfo' => {
+                            'country' => 'FR',
+                            'saleability' => 'FREE',
+                            'buyLink' => 'http://books.google.fr/books?id=2bCdaZ7KvDsC&dq=flowers&hl=&buy=&source=gbs_api',
+                            'isEbook' => $VAR1->[0]{'accessInfo'}{'embeddable'}
+                          }
+          },
+          {
+            'etag' => '8DXyus04Qvk',
+            'accessInfo' => {
+                              'country' => 'FR',
+                              'textToSpeechPermission' => 'ALLOWED',
+                              'quoteSharingAllowed' => $VAR1->[0]{'accessInfo'}{'quoteSharingAllowed'},
+                              'webReaderLink' => 'http://books.google.fr/books/reader?id=AwGJVW948mwC&hl=&printsec=frontcover&output=reader&source=gbs_api',
+                              'pdf' => {
+                                         'isAvailable' => $VAR1->[0]{'accessInfo'}{'quoteSharingAllowed'}
+                                       },
+                              'publicDomain' => $VAR1->[0]{'accessInfo'}{'quoteSharingAllowed'},
+                              'accessViewStatus' => 'SAMPLE',
+                              'viewability' => 'PARTIAL',
+                              'epub' => {
+                                          'isAvailable' => $VAR1->[0]{'accessInfo'}{'quoteSharingAllowed'}
+                                        },
+                              'embeddable' => $VAR1->[0]{'accessInfo'}{'embeddable'}
+                            },
+            'volumeInfo' => {
+                              'industryIdentifiers' => [
+                                                         {
+                                                           'identifier' => '9625932933',
+                                                           'type' => 'ISBN_10'
+                                                         },
+                                                         {
+                                                           'identifier' => '9789625932934',
+                                                           'type' => 'ISBN_13'
+                                                         }
+                                                       ],
+                              'contentVersion' => '1.0.0.0.preview.1',
+                              'publisher' => 'Tuttle Publishing',
+                              'canonicalVolumeLink' => 'http://books.google.fr/books/about/The_Edible_Flower_Garden.html?hl=&id=AwGJVW948mwC',
+                              'authors' => [
+                                             'Rosalind Creasy'
+                                           ],
+                              'imageLinks' => {
+                                                'thumbnail' => 'http://bks4.books.google.fr/books?id=AwGJVW948mwC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api',
+                                                'smallThumbnail' => 'http://bks4.books.google.fr/books?id=AwGJVW948mwC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api'
+                                              },
+                              'language' => 'en',
+                              'ratingsCount' => 4,
+                              'infoLink' => 'http://books.google.fr/books?id=AwGJVW948mwC&dq=flowers&hl=&source=gbs_api',
+                              'publishedDate' => '1999-03-15',
+                              'categories' => [
+                                                'Cooking'
+                                              ],
+                              'previewLink' => 'http://books.google.fr/books?id=AwGJVW948mwC&printsec=frontcover&dq=flowers&hl=&cd=5&source=gbs_api',
+                              'description' => 'Offers details on planting, growing, and harvesting over forty varieties of edible flowers and provides recipes for flower butters, candied flowers, appetizers, salads, and main dishes',
+                              'printType' => 'BOOK',
+                              'pageCount' => 112,
+                              'title' => 'The Edible Flower Garden',
+                              'averageRating' => '4'
+                            },
+            'selfLink' => 'https://www.googleapis.com/books/v1/volumes/AwGJVW948mwC',
+            'kind' => 'books#volume',
+            'id' => 'AwGJVW948mwC',
+            'searchInfo' => {
+                              'textSnippet' => 'Offers details on planting, growing, and harvesting over forty varieties of edible flowers and provides recipes for flower butters, candied flowers, appetizers, salads, and main dishes'
+                            },
+            'saleInfo' => {
+                            'country' => 'FR',
+                            'saleability' => 'NOT_FOR_SALE',
+                            'isEbook' => $VAR1->[0]{'accessInfo'}{'quoteSharingAllowed'}
+                          }
+          },
+          {
+            'etag' => 'ihhjy6Eci8E',
+            'accessInfo' => {
+                              'country' => 'FR',
+                              'textToSpeechPermission' => 'ALLOWED',
+                              'quoteSharingAllowed' => $VAR1->[0]{'accessInfo'}{'quoteSharingAllowed'},
+                              'webReaderLink' => 'http://books.google.fr/books/reader?id=KN5TUmGSPaoC&hl=&printsec=frontcover&output=reader&source=gbs_api',
+                              'pdf' => {
+                                         'isAvailable' => $VAR1->[0]{'accessInfo'}{'quoteSharingAllowed'}
+                                       },
+                              'publicDomain' => $VAR1->[0]{'accessInfo'}{'quoteSharingAllowed'},
+                              'accessViewStatus' => 'SAMPLE',
+                              'viewability' => 'PARTIAL',
+                              'epub' => {
+                                          'isAvailable' => $VAR1->[0]{'accessInfo'}{'quoteSharingAllowed'}
+                                        },
+                              'embeddable' => $VAR1->[0]{'accessInfo'}{'embeddable'}
+                            },
+            'volumeInfo' => {
+                              'authors' => [
+                                             'Virginia Nathanson'
+                                           ],
+                              'imageLinks' => {
+                                                'thumbnail' => 'http://bks3.books.google.fr/books?id=KN5TUmGSPaoC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api',
+                                                'smallThumbnail' => 'http://bks3.books.google.fr/books?id=KN5TUmGSPaoC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api'
+                                              },
+                              'language' => 'en',
+                              'infoLink' => 'http://books.google.fr/books?id=KN5TUmGSPaoC&dq=flowers&hl=&source=gbs_api',
+                              'industryIdentifiers' => [
+                                                         {
+                                                           'identifier' => '0486422461',
+                                                           'type' => 'ISBN_10'
+                                                         },
+                                                         {
+                                                           'identifier' => '9780486422466',
+                                                           'type' => 'ISBN_13'
+                                                         }
+                                                       ],
+                              'publishedDate' => '2011-11',
+                              'previewLink' => 'http://books.google.fr/books?id=KN5TUmGSPaoC&printsec=frontcover&dq=flowers&hl=&cd=6&source=gbs_api',
+                              'categories' => [
+                                                'Crafts & Hobbies'
+                                              ],
+                              'description' => 'Step-by-step instructions and scores of illustrations show aspiring beadworkers how to assemble more than 50 botanically accurate specimens of African violets, hyacinths, sunflowers, miniature versions of irises, jonquils, tea roses, and many other glittering beauties. Also, helpful suggestions for creating table decorations, attractive bouquets, and festive Christmas ornaments.',
+                              'printType' => 'BOOK',
+                              'contentVersion' => '1.1.1.0.preview.1',
+                              'title' => 'Making Bead Flowers and Bouquets',
+                              'pageCount' => 192,
+                              'publisher' => 'Courier Dover Publications',
+                              'canonicalVolumeLink' => 'http://books.google.fr/books/about/Making_Bead_Flowers_and_Bouquets.html?hl=&id=KN5TUmGSPaoC'
+                            },
+            'selfLink' => 'https://www.googleapis.com/books/v1/volumes/KN5TUmGSPaoC',
+            'kind' => 'books#volume',
+            'id' => 'KN5TUmGSPaoC',
+            'searchInfo' => {
+                              'textSnippet' => 'Step-by-step instructions and scores of illustrations show aspiring beadworkers how to assemble more than 50 botanically accurate specimens of African violets, hyacinths, sunflowers, miniature versions of irises, jonquils, tea roses, and ...'
+                            },
+            'saleInfo' => {
+                            'country' => 'FR',
+                            'saleability' => 'NOT_FOR_SALE',
+                            'isEbook' => $VAR1->[0]{'accessInfo'}{'quoteSharingAllowed'}
+                          }
+          },
+          {
+            'etag' => 'r87eeqc8Rwo',
+            'accessInfo' => {
+                              'country' => 'FR',
+                              'textToSpeechPermission' => 'ALLOWED',
+                              'quoteSharingAllowed' => $VAR1->[0]{'accessInfo'}{'quoteSharingAllowed'},
+                              'webReaderLink' => 'http://books.google.fr/books/reader?id=PK1ZX3u7CPcC&hl=&printsec=frontcover&output=reader&source=gbs_api',
+                              'pdf' => {
+                                         'isAvailable' => $VAR1->[0]{'accessInfo'}{'embeddable'}
+                                       },
+                              'publicDomain' => $VAR1->[0]{'accessInfo'}{'quoteSharingAllowed'},
+                              'accessViewStatus' => 'SAMPLE',
+                              'viewability' => 'PARTIAL',
+                              'epub' => {
+                                          'isAvailable' => $VAR1->[0]{'accessInfo'}{'quoteSharingAllowed'}
+                                        },
+                              'embeddable' => $VAR1->[0]{'accessInfo'}{'embeddable'}
+                            },
+            'volumeInfo' => {
+                              'industryIdentifiers' => [
+                                                         {
+                                                           'identifier' => '0715338439',
+                                                           'type' => 'ISBN_10'
+                                                         },
+                                                         {
+                                                           'identifier' => '9780715338438',
+                                                           'type' => 'ISBN_13'
+                                                         }
+                                                       ],
+                              'contentVersion' => '1.1.1.0.preview.1',
+                              'publisher' => 'David & Charles',
+                              'canonicalVolumeLink' => 'http://books.google.fr/books/about/200_Crochet_Flowers_Embellishments_Trims.html?hl=&id=PK1ZX3u7CPcC',
+                              'authors' => [
+                                             'Claire Crompton'
+                                           ],
+                              'imageLinks' => {
+                                                'thumbnail' => 'http://bks6.books.google.fr/books?id=PK1ZX3u7CPcC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api',
+                                                'smallThumbnail' => 'http://bks6.books.google.fr/books?id=PK1ZX3u7CPcC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api'
+                                              },
+                              'language' => 'en',
+                              'infoLink' => 'http://books.google.fr/books?id=PK1ZX3u7CPcC&dq=flowers&hl=&source=gbs_api',
+                              'ratingsCount' => 10,
+                              'publishedDate' => '2011-03-08',
+                              'categories' => [
+                                                'Crafts & Hobbies'
+                                              ],
+                              'previewLink' => 'http://books.google.fr/books?id=PK1ZX3u7CPcC&printsec=frontcover&dq=flowers&hl=&cd=7&source=gbs_api',
+                              'description' => 'Enhanced by twenty project ideas, offers two hundred crochet stitches, embellishments, and trims, with every stitch shown as a swatch and the pattern given in both written and diagram form.',
+                              'printType' => 'BOOK',
+                              'subtitle' => 'Contemporary Designs for Embellishing All of Your Accessories',
+                              'pageCount' => 128,
+                              'title' => '200 Crochet Flowers, Embellishments & Trims',
+                              'averageRating' => '3.5'
+                            },
+            'selfLink' => 'https://www.googleapis.com/books/v1/volumes/PK1ZX3u7CPcC',
+            'kind' => 'books#volume',
+            'id' => 'PK1ZX3u7CPcC',
+            'searchInfo' => {
+                              'textSnippet' => 'Enhanced by twenty project ideas, offers two hundred crochet stitches, embellishments, and trims, with every stitch shown as a swatch and the pattern given in both written and diagram form.'
+                            },
+            'saleInfo' => {
+                            'country' => 'FR',
+                            'saleability' => 'NOT_FOR_SALE',
+                            'isEbook' => $VAR1->[0]{'accessInfo'}{'quoteSharingAllowed'}
+                          }
+          },
+          {
+            'etag' => 'oLTPUXGQgh8',
+            'accessInfo' => {
+                              'country' => 'FR',
+                              'textToSpeechPermission' => 'ALLOWED',
+                              'quoteSharingAllowed' => $VAR1->[0]{'accessInfo'}{'quoteSharingAllowed'},
+                              'webReaderLink' => 'http://books.google.fr/books/reader?id=PVS4ZCp3AkoC&hl=&printsec=frontcover&output=reader&source=gbs_api',
+                              'pdf' => {
+                                         'isAvailable' => $VAR1->[0]{'accessInfo'}{'quoteSharingAllowed'}
+                                       },
+                              'publicDomain' => $VAR1->[0]{'accessInfo'}{'quoteSharingAllowed'},
+                              'accessViewStatus' => 'SAMPLE',
+                              'viewability' => 'PARTIAL',
+                              'epub' => {
+                                          'isAvailable' => $VAR1->[0]{'accessInfo'}{'quoteSharingAllowed'}
+                                        },
+                              'embeddable' => $VAR1->[0]{'accessInfo'}{'embeddable'}
+                            },
+            'volumeInfo' => {
+                              'industryIdentifiers' => [
+                                                         {
+                                                           'identifier' => '1592170129',
+                                                           'type' => 'ISBN_10'
+                                                         },
+                                                         {
+                                                           'identifier' => '9781592170128',
+                                                           'type' => 'ISBN_13'
+                                                         }
+                                                       ],
+                              'contentVersion' => '1.1.1.0.preview.1',
+                              'publisher' => 'DRG Wholesale',
+                              'canonicalVolumeLink' => 'http://books.google.fr/books/about/Flowers_of_the_Bible.html?hl=&id=PVS4ZCp3AkoC',
+                              'authors' => [
+                                             'Helga Curtis'
+                                           ],
+                              'imageLinks' => {
+                                                'thumbnail' => 'http://bks7.books.google.fr/books?id=PVS4ZCp3AkoC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api',
+                                                'smallThumbnail' => 'http://bks7.books.google.fr/books?id=PVS4ZCp3AkoC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api'
+                                              },
+                              'language' => 'en',
+                              'ratingsCount' => 1,
+                              'infoLink' => 'http://books.google.fr/books?id=PVS4ZCp3AkoC&dq=flowers&hl=&source=gbs_api',
+                              'publishedDate' => '2003-01-01',
+                              'categories' => [
+                                                'Crafts & Hobbies'
+                                              ],
+                              'previewLink' => 'http://books.google.fr/books?id=PVS4ZCp3AkoC&printsec=frontcover&dq=flowers&hl=&cd=8&source=gbs_api',
+                              'description' => 'Of the 110 plants mentioned in the Bible, scholars have only been able to identify 31 flowers. Now you can make beautiful appliqui quilt blocks featuring the 31 flowers, and enjoy the scriptural references and descriptions for each one. Blocks are 1420" square; full-size templates included.',
+                              'printType' => 'BOOK',
+                              'pageCount' => 129,
+                              'title' => 'Flowers of the Bible',
+                              'averageRating' => '3'
+                            },
+            'selfLink' => 'https://www.googleapis.com/books/v1/volumes/PVS4ZCp3AkoC',
+            'kind' => 'books#volume',
+            'id' => 'PVS4ZCp3AkoC',
+            'searchInfo' => {
+                              'textSnippet' => 'Of the 110 plants mentioned in the Bible, scholars have only been able to identify 31 flowers.'
+                            },
+            'saleInfo' => {
+                            'country' => 'FR',
+                            'saleability' => 'NOT_FOR_SALE',
+                            'isEbook' => $VAR1->[0]{'accessInfo'}{'quoteSharingAllowed'}
+                          }
+          },
+          {
+            'etag' => 'e7mXSyuRNcc',
+            'accessInfo' => {
+                              'country' => 'FR',
+                              'textToSpeechPermission' => 'ALLOWED',
+                              'quoteSharingAllowed' => $VAR1->[0]{'accessInfo'}{'quoteSharingAllowed'},
+                              'webReaderLink' => 'http://books.google.fr/books/reader?id=Z7DRvu7YQ8oC&hl=&printsec=frontcover&output=reader&source=gbs_api',
+                              'pdf' => {
+                                         'isAvailable' => $VAR1->[0]{'accessInfo'}{'embeddable'},
+                                         'acsTokenLink' => 'http://books.google.fr/books/download/Flowers_A_to_Z_with_Donna_Dewberry-sample-pdf.acsm?id=Z7DRvu7YQ8oC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api'
+                                       },
+                              'publicDomain' => $VAR1->[0]{'accessInfo'}{'quoteSharingAllowed'},
+                              'accessViewStatus' => 'SAMPLE',
+                              'viewability' => 'PARTIAL',
+                              'epub' => {
+                                          'isAvailable' => $VAR1->[0]{'accessInfo'}{'quoteSharingAllowed'}
+                                        },
+                              'embeddable' => $VAR1->[0]{'accessInfo'}{'embeddable'}
+                            },
+            'volumeInfo' => {
+                              'industryIdentifiers' => [
+                                                         {
+                                                           'identifier' => '1581804849',
+                                                           'type' => 'ISBN_10'
+                                                         },
+                                                         {
+                                                           'identifier' => '9781581804843',
+                                                           'type' => 'ISBN_13'
+                                                         }
+                                                       ],
+                              'contentVersion' => '1.1.0.0.preview.1',
+                              'publisher' => 'North Light Books',
+                              'canonicalVolumeLink' => 'http://books.google.fr/books/about/Flowers_A_to_Z_with_Donna_Dewberry.html?hl=&id=Z7DRvu7YQ8oC',
+                              'authors' => [
+                                             'Donna Dewberry'
+                                           ],
+                              'imageLinks' => {
+                                                'thumbnail' => 'http://bks4.books.google.fr/books?id=Z7DRvu7YQ8oC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api',
+                                                'smallThumbnail' => 'http://bks4.books.google.fr/books?id=Z7DRvu7YQ8oC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api'
+                                              },
+                              'language' => 'en',
+                              'ratingsCount' => 3,
+                              'infoLink' => 'http://books.google.fr/books?id=Z7DRvu7YQ8oC&dq=flowers&hl=&source=gbs_api',
+                              'publishedDate' => '2004-07-04',
+                              'categories' => [
+                                                'Crafts & Hobbies'
+                                              ],
+                              'previewLink' => 'http://books.google.fr/books?id=Z7DRvu7YQ8oC&printsec=frontcover&dq=flowers&hl=&cd=9&source=gbs_api',
+                              'description' => 'Provides instructions on painting flowers, vines, and other types of foliage to decorate furniture, walls, and other items.',
+                              'printType' => 'BOOK',
+                              'pageCount' => 144,
+                              'title' => 'Flowers A to Z with Donna Dewberry',
+                              'averageRating' => '5'
+                            },
+            'selfLink' => 'https://www.googleapis.com/books/v1/volumes/Z7DRvu7YQ8oC',
+            'kind' => 'books#volume',
+            'id' => 'Z7DRvu7YQ8oC',
+            'searchInfo' => {
+                              'textSnippet' => 'Provides instructions on painting flowers, vines, and other types of foliage to decorate furniture, walls, and other items.'
+                            },
+            'saleInfo' => {
+                            'country' => 'FR',
+                            'saleability' => 'NOT_FOR_SALE',
+                            'isEbook' => $VAR1->[0]{'accessInfo'}{'quoteSharingAllowed'}
+                          }
+          },
+          {
+            'etag' => 'ZUIPi8y8EZI',
+            'accessInfo' => {
+                              'country' => 'FR',
+                              'textToSpeechPermission' => 'ALLOWED',
+                              'quoteSharingAllowed' => $VAR1->[0]{'accessInfo'}{'quoteSharingAllowed'},
+                              'webReaderLink' => 'http://books.google.fr/books/reader?id=u3tgZ-hKARgC&hl=&printsec=frontcover&output=reader&source=gbs_api',
+                              'pdf' => {
+                                         'isAvailable' => $VAR1->[0]{'accessInfo'}{'quoteSharingAllowed'}
+                                       },
+                              'publicDomain' => $VAR1->[0]{'accessInfo'}{'quoteSharingAllowed'},
+                              'accessViewStatus' => 'SAMPLE',
+                              'viewability' => 'PARTIAL',
+                              'epub' => {
+                                          'isAvailable' => $VAR1->[0]{'accessInfo'}{'quoteSharingAllowed'}
+                                        },
+                              'embeddable' => $VAR1->[0]{'accessInfo'}{'embeddable'}
+                            },
+            'volumeInfo' => {
+                              'industryIdentifiers' => [
+                                                         {
+                                                           'identifier' => '0809117541',
+                                                           'type' => 'ISBN_10'
+                                                         },
+                                                         {
+                                                           'identifier' => '9780809117543',
+                                                           'type' => 'ISBN_13'
+                                                         }
+                                                       ],
+                              'contentVersion' => '1.1.1.0.preview.0',
+                              'publisher' => 'Paulist Press',
+                              'canonicalVolumeLink' => 'http://books.google.fr/books/about/Hope_for_the_Flowers.html?hl=&id=u3tgZ-hKARgC',
+                              'imageLinks' => {
+                                                'thumbnail' => 'http://bks7.books.google.fr/books?id=u3tgZ-hKARgC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api',
+                                                'smallThumbnail' => 'http://bks7.books.google.fr/books?id=u3tgZ-hKARgC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api'
+                                              },
+                              'language' => 'en',
+                              'ratingsCount' => 35,
+                              'infoLink' => 'http://books.google.fr/books?id=u3tgZ-hKARgC&dq=flowers&hl=&source=gbs_api',
+                              'publishedDate' => '1972',
+                              'categories' => [
+                                                'Religion'
+                                              ],
+                              'previewLink' => 'http://books.google.fr/books?id=u3tgZ-hKARgC&printsec=frontcover&dq=flowers&hl=&cd=10&source=gbs_api',
+                              'description' => 'Stripe, an ambitious young caterpillar, abandons his struggle to reach the top when he meets a lovely yellow butterfly',
+                              'printType' => 'BOOK',
+                              'pageCount' => 144,
+                              'title' => 'Hope for the Flowers',
+                              'averageRating' => '4'
+                            },
+            'selfLink' => 'https://www.googleapis.com/books/v1/volumes/u3tgZ-hKARgC',
+            'kind' => 'books#volume',
+            'id' => 'u3tgZ-hKARgC',
+            'searchInfo' => {
+                              'textSnippet' => 'Stripe, an ambitious young caterpillar, abandons his struggle to reach the top when he meets a lovely yellow butterfly'
+                            },
+            'saleInfo' => {
+                            'country' => 'FR',
+                            'saleability' => 'NOT_FOR_SALE',
+                            'isEbook' => $VAR1->[0]{'accessInfo'}{'quoteSharingAllowed'}
+                          }
+          }
+        ];

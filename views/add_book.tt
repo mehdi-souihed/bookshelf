@@ -1,0 +1,57 @@
+
+	<form method="post" action="">
+		<label class="description" for="title">Title </label>
+		<div>
+			<input id="title" name="title" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div> 
+		</li>		<li id="li_2" >
+		<label class="description" for="author">Author </label>
+		<div>
+			<input id="author" name="author" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div> 
+		</li>		<li id="li_3" >
+		<label class="description" for="pages">Pages </label>
+		<div>
+			<input id="pages" name="pages" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div> 
+		</li>		<li id="li_4" >
+		<label class="description" for="isbn">ISBN </label>
+		<div>
+			<input id="isbn" name="isbn" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div> 
+		</li>		<li id="li_5" >
+		<label class="description" for="year">Year </label>
+		<div>
+			<input id="year" name="year" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div> 
+		</li>		<li id="li_6" >
+		<label class="description" for="genre">Genre </label>
+		<div>
+			<input id="genre" name="genre" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div> 
+		</li>		<li id="li_7" >
+		<label class="description" for="url">URL </label>
+		<div>
+			<input id="url" name="url" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div> 
+		<label class="description" for="link_image">Link Image </label>
+		<div>
+			<input id="link_image" name="link_image" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div> 
+		</li>		<li id="li_8" >
+		<label class="description" for="status">Status </label>
+		<div>
+			<input id="status" name="status" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div> 
+		</li>		<li id="li_9" >
+		<label class="description" for="tags">Tags </label>
+		<div>
+			<input id="tags" name="tags" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div> 
+		</li>
+			
+			    
+				<input id="saveForm" class="button_text" type="submit" name="submit" value="Submit" />
+			</ul>
+		</form>	
+
