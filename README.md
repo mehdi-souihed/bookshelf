@@ -6,7 +6,7 @@ A Perl application running on Dancer to keep track of your books.
 You can  :
 
  - Create lists of books
- - Put tags your books
+ - Put tags on your books
  - Give a status to your books (read, to read, currently reading)
  - Write a review on a book
  - Add up the pages of the books you have read
