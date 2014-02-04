@@ -1,7 +1,13 @@
 <h1>Results </h1>
-	<p> Results : </p>
+	<p> Results for <% search %>: </p>
 		<ul>
 		  <% FOR result IN results %>
-  		  <li><a href="#"> <% result.volumeInfo.title %> </a></li>
+  		  <li><a href="#"> <% result.volumeInfo.title %> </a>
+ 		
+		  <img src="<% result.volumeInfo.imageLinks.smallThumbnail%>">	
+		   
+		  <% result.searchInfo.textSnippet %>
+		  </li>
+		      		
 		  <% END %>  
 		</ul>

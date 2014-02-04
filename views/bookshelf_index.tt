@@ -3,6 +3,9 @@
 <p><a href="/add_book"> Add a book</a></p>
 
 <p><a href="/search_book"> Search a book</a><p>
+
+<p><a href="/login">Login</a><p>
+<p><a href="/signup">Signup</a><p>
 <p> <b><h2>TODO</h2></b> </p>
 <p> [x] Retrieve search from Google API</p>
 <p>   	-->[ ] Put summary, author, number of pages etc.. in results</p>
