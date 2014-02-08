@@ -3,6 +3,7 @@ use Dancer ':syntax';
 use Controller;
 use Book;
 use GoogleApi;
+use Data::Dumper;
 
 use v5.10;
 
@@ -37,6 +38,35 @@ my $book = Book->new(
 
 };
 
+get '/add_user' => sub {
+    template 'add_user';
+};
+
+post '/add_user' => sub {
+
+my $user = User->new(
+        fname   => params->{fname},
+        lname  => params->{lname},
+        email   => params->{email},
+        user_password    => params->{upass},
+);
+
+ Controller::add_user($user);
+ 
+ redirect '/bookshelf';
+
+};
+
+get '/login' => sub {
+    template 'login';
+};
+
+post '/login' => sub {
+
+ Controller::login(params->{email}, params->{upass})? redirect '/bookshelf' : template 'login',{login_failed => 1};
+
+};
+
 get '/search_book' => sub {
     template 'search_book';
 };
@@ -44,7 +74,7 @@ get '/search_book' => sub {
 post '/results_books' => sub {
     my $results = GoogleApi::search_book(params->{keyword});
     
-    template 'results_books',{results => $results} ;
+    template 'results_books',{results => $results, search => params->{keyword}} ;
 };
 
 

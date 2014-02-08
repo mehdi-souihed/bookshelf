@@ -1,0 +1,21 @@
+
+	<form method="post" action="">
+		<label class="description" for="fname">First Name </label>
+		<div>
+			<input id="fname" name="fname" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div> 
+		<label class="description" for="lname">Last Name </label>
+		<div>
+			<input id="lname" name="lname" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div> 
+		<label class="description" for="email">Email </label>
+		<div>
+			<input id="email" name="email" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div> 
+		<label class="description" for="upass">Password </label>
+		<div>
+			<input id="upass" name="upass" class="element text medium" type="password" maxlength="255" value=""/> 
+		</div> 
+			<input id="saveForm" class="button_text" type="submit" name="submit" value="Submit" />
+		</form>	
+
