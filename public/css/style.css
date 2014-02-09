@@ -164,6 +164,18 @@ list-style-type: none;
 #sidebar ul.links li {
 margin-bottom: 5px;
 }
+#navbar ul{
+position:absolute;
+right:100px;
+top:15px;
+list-style-type:none;
+margin:0;
+padding:0;
+}
+#navbar li {
+display: inline;
+background-color: #ff0;
+}
 
 h1, h2, h3, h4, h5 {
 font-family: sans-serif;
@@ -230,3 +242,4 @@ li a:hover {
   font-size: 30px;
   background: #000;
 }
+

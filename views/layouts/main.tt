@@ -14,6 +14,17 @@
 
 </head>
 <body>
+	 <div style="clear: both;"></div>
+	<% IF session.user %>
+	<div id="navbar"> 
+		<ul>
+			<li id="navbar">
+			Hi <% session.user %> ! 			
+			</li>
+		</ul>
+        </div>
+	<% END %>
+
 <% content %>
 <div id="footer">
 Powered by <a href="http://perldancer.org/">Dancer</a> <% dancer_version %>
