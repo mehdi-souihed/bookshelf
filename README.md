@@ -1,7 +1,7 @@
 bookshelf
 =========
 
-A Perl application running on Dancer to keep track of your books.
+A Perl application running on Dancer to keep track of your books using Google Books API
 
 You can  :
 
