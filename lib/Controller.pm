@@ -54,6 +54,11 @@ sub add_user {
  $dbh->disconnect;
 }
 
+sub add_book_user {
+
+	return 1;
+}
+
 sub login {
  my $email = shift ;
  my $passwd = shift;

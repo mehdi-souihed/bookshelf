@@ -2,12 +2,25 @@
 	<p> Results for <% search %>: </p>
 		<ul>
 		  <% FOR result IN results %>
-  		  <li><a href="#"> <% result.volumeInfo.title %> </a>
- 		
-		  <img src="<% result.volumeInfo.imageLinks.smallThumbnail%>">	
+  		  <li class="results">
+		
+		   <% IF session.user %>
+		   <input type=button id="myButton" class="myButton" value="Add Book" name="<%result.id%>"/>
+
+ 		   <% END %>
+
+		   <a href="#"> <% result.volumeInfo.title %> </a>
+
+		   <img src="<% result.volumeInfo.imageLinks.smallThumbnail%>">	
 		   
-		  <% result.searchInfo.textSnippet %>
+		   <% result.searchInfo.textSnippet %>
+		  
 		  </li>
 		      		
 		  <% END %>  
 		</ul>
+
+
+
+
+

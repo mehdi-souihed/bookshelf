@@ -1,5 +1,6 @@
 package Web;
 use Dancer ':syntax';
+use Dancer::Plugin::Ajax;
 use Controller;
 use Book;
 use GoogleApi;
@@ -86,6 +87,16 @@ post '/results_books' => sub {
 	my $results = GoogleApi::search_book(params->{keyword});
 
 	template 'results_books',{results => $results, search => params->{keyword}} ;
+};
+
+ajax '/user/:action' => sub {
+
+	if (params->{action} eq 'add_book'){
+		header('Content-Type' => 'text/plain');
+		header('Cache-Control' =>  'no-store, no-cache, must-revalidate');
+		return Controller::add_book_user(session('user'),params->{id});
+	}
+
 };
 
 

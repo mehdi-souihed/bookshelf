@@ -9,7 +9,7 @@ use DBI;
 #2. Create book table
 #3. Create user table 
 
-sub create_user_table {
+sub create_tables {
 
  my $database = shift || 'booky';
  my $username = shift || 'root';
@@ -19,23 +19,34 @@ sub create_user_table {
  my $dbh = DBI->connect('DBI:mysql:'.$database, $username, $password
                    ) || die "Could not connect to database: $DBI::errstr";
 
-=item
-id,
-title, 
-author, 
-pages, 
-isbn, 
-year, 
-genre, 
-url, 
-link_image, 
-status, 
-tags
-
-    warn "Could not create User table" unless ($dbh->do($sql));
-=cut
-
 my $sql = <<'END_SQL';
+CREATE TABLE book_id (
+id INTEGER PRIMARY KEY AUTO_INCREMENT,
+googleid VARCHAR(100),
+nb_pages INTEGER, 
+date timestamp default current_timestamp
+)
+END_SQL
+
+    warn "Could not create book_id table" unless ($dbh->do($sql));
+
+ $sql = <<'END_SQL';
+CREATE TABLE user_list (
+id INTEGER PRIMARY KEY AUTO_INCREMENT,
+userid VARCHAR(100),
+googleid VARCHAR(100),
+status VARCHAR(100),
+category VARCHAR(100),
+rate INTEGER,
+tags  VARCHAR(255),
+review VARCHAR(5000),
+date timestamp default current_timestamp
+)
+END_SQL
+
+    warn "Could not create user_list table" unless ($dbh->do($sql));
+
+ $sql = <<'END_SQL';
 CREATE TABLE user (
 id INTEGER PRIMARY KEY AUTO_INCREMENT,
 fname VARCHAR(100),
@@ -52,4 +63,4 @@ $dbh->disconnect;
 
 }
 
-create_user_table();
+create_tables();

@@ -216,16 +216,16 @@ ul {
   padding: 0;
 }
  
-li {
+li.results {
   font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
   border-bottom: 1px solid #ccc;
 }
  
-li:last-child {
+li.results:last-child {
   border: none;
 }
  
-li a {
+li.results a.results {
   text-decoration: none;
   color: #000;
   display: block;
@@ -238,8 +238,33 @@ li a {
   transition: font-size 0.3s ease, background-color 0.3s ease;
 }
  
-li a:hover {
+li.results a.results:hover {
   font-size: 30px;
   background: #000;
+}
+
+.myButton {
+	background-color:#44c767;
+	-moz-border-radius:35px;
+	-webkit-border-radius:35px;
+	border-radius:35px;
+	border:3px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Verdana;
+	font-size:10px;
+	font-weight:bold;
+	padding:9px 12px;
+	text-decoration:none;
+	text-shadow:0px 0px 4px #2f6627;
+}
+.buttonDown {
+	background-color:#000;
+}
+
+.myButton:active {
+	position:relative;
+	top:1px;
 }
 
