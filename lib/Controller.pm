@@ -35,7 +35,10 @@ sub add_book {
   }
  
  my $dbh = dbconnect();
- my $sth = $dbh->do('INSERT INTO books (title, author, pages, isbn, year, genre, url, link_image, status, tags,time) VALUES (?,?,?,?,?,?,?,?,?,?)',undef, $book->title, $book->author, $book->pages, $book->isbn, $book->year, $book->genre, $book->url, $book->link_image, $book->status, $book->tags,time);
+  $dbh->do('INSERT INTO books (title, author, pages, isbn, year, genre, url, link_image, status, tags,time) 
+	   VALUES (?,?,?,?,?,?,?,?,?,?)',
+	   undef, $book->title, $book->author, $book->pages, $book->isbn, $book->year, $book->genre, 
+	   $book->url, $book->link_image, $book->status, $book->tags,time);
 	
 $dbh->disconnect;
 }
@@ -49,14 +52,61 @@ sub add_user {
   }
  
  my $dbh = dbconnect();
- my $sth = $dbh->do('INSERT INTO user (fname,lname,email,password) VALUES (?,?,?,?)',undef, $user->fname, $user->lname, $user->email, $user->md5_password);
+ $dbh->do('INSERT INTO user (fname,lname,email,password) VALUES (?,?,?,?)',
+	 undef, $user->fname, $user->lname, $user->email, $user->md5_password);
 	
  $dbh->disconnect;
 }
 
 sub add_book_user {
+ my $user = shift;
+ my $bookid = shift;
+ my $status = 'unknown';
+ my $category = 'unknown';
+ my $rate = -1;
+ my $tags = 'unknown';
+ my $review = 'unknown';
 
-	return 1;
+# Check for correct values in $user and $bookid ? TODO
+
+ my $dbh = dbconnect();
+
+# Checking that the book is not already in the list 
+ my $sql = 'SELECT * FROM user_list WHERE googleid = ? AND userid = ? ';
+ my $sth = $dbh->prepare($sql);
+ $sth->execute($bookid, $user); 
+ my $row = $sth->fetchrow_array || '';
+ $sth->finish();
+ my $r = 'duplicate';
+ if($row eq ''){
+ $dbh->do('INSERT INTO user_list (userid,googleid,status,category,rate,tags,review) VALUES (?,?,?,?,?,?,?)', undef, $user, $bookid, $status,$category,$rate,$tags,$review);
+  my $r = 'added';
+ }
+ $dbh->disconnect; 
+ return $r;
+}
+
+sub delete_book_user {
+ my $user = shift;
+ my $bookid = shift;
+
+# Check for correct values in $user and $bookid ? TODO
+
+ my $dbh = dbconnect();
+
+# Checking that the book is not already in the list 
+ my $sql = 'SELECT googleid FROM user_list WHERE googleid = ? AND userid = ?';
+ my $sth = $dbh->prepare($sql);
+ $sth->execute($bookid, $user); 
+ my $row = $sth->fetchrow_array || '';
+ my $r = 'error while deleting';
+ if($row ne ''){
+ $sql = 'DELETE FROM user_list WHERE googleid = ? AND userid = ?';
+ $sth =  $dbh->prepare($sql);
+ $r = 'deleted' if( $sth->execute($bookid, $user));
+ $dbh->disconnect;
+ return $r; 
+ }
 }
 
 sub login {
@@ -68,6 +118,7 @@ sub login {
  my $sth = $dbh->prepare($sql);
  $sth->execute($email); 
  my $row = $sth->fetchrow_array || '';
+ $dbh->disconnect;
  return md5($passwd) eq $row ? 1 : 0;
 };
 

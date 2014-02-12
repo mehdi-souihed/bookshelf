@@ -91,12 +91,18 @@ post '/results_books' => sub {
 
 ajax '/user/:action' => sub {
 
+	my $response = undef;
 	if (params->{action} eq 'add_book'){
-		header('Content-Type' => 'text/plain');
-		header('Cache-Control' =>  'no-store, no-cache, must-revalidate');
-		return Controller::add_book_user(session('user'),params->{id});
+		$response = Controller::add_book_user(session('user'),params->{id});
 	}
 
+	if (params->{action} eq 'delete_book'){
+		$response =  Controller::delete_book_user(session('user'),params->{id});
+	}
+		header('Content-Type' => 'text/plain');
+		header('Cache-Control' =>  'no-store, no-cache, must-revalidate');
+		debug $response;
+		return $response;
 };
 
 

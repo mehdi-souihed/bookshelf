@@ -4,7 +4,6 @@ use strict;
 use warnings;
 use DBI;
 
-
 #1. Create database
 #2. Create book table
 #3. Create user table 
@@ -22,7 +21,7 @@ sub create_tables {
 my $sql = <<'END_SQL';
 CREATE TABLE book_id (
 id INTEGER PRIMARY KEY AUTO_INCREMENT,
-googleid VARCHAR(100),
+googleid VARCHAR(100) UNIQUE NOT NULL,
 nb_pages INTEGER, 
 date timestamp default current_timestamp
 )
