@@ -5,8 +5,21 @@
   		  <li class="results">
 		
 		   <% IF session.user %>
-		   <input type=button id="myButton" class="myButton" value="Add Book" name="<%result.id%>"/>
+		   <div
+data-googleid="<% result.id %>"		
+data-nbpages="<% result.volumeInfo.pageCount %>"
+data-authors="<% FOREACH person IN result.volumeInfo.authors %>
+	<% person %>
+	<% END %>"
+data-title="<% result.volumeInfo.title %>"
+data-desc="<% result.volumeInfo.description %>"
+data-image_link="<% result.volumeInfo.imageLinks.smallThumbnail	 %>"
+data-categories="<% FOREACH cat IN result.volumeInfo.categories %>
+	<% cat %>
+	<% END %>"
+></div>
 
+		   <input type=button id="myButton" class="myButton" value="Add Book" name="<%result.id%>"/>
  		   <% END %>
 
 		   <a href="#"> <% result.volumeInfo.title %> </a>

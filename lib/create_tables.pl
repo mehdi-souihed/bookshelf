@@ -23,6 +23,11 @@ CREATE TABLE book_id (
 id INTEGER PRIMARY KEY AUTO_INCREMENT,
 googleid VARCHAR(100) UNIQUE NOT NULL,
 nb_pages INTEGER, 
+author VARCHAR(255),
+title VARCHAR(255),
+description VARCHAR(3000),
+image_link VARCHAR(255),
+categories VARCHAR(255), 
 date timestamp default current_timestamp
 )
 END_SQL

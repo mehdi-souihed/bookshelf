@@ -1,5 +1,6 @@
 package Controller;
 
+
 use strict;
 use warnings;
 
@@ -26,7 +27,7 @@ sub dbconnect {
                    ) || die "Could not connect to database: $DBI::errstr";
 }
 
-sub add_book {
+sub add_book_id {
 
  my $book = shift ;
 
@@ -35,12 +36,25 @@ sub add_book {
   }
  
  my $dbh = dbconnect();
-  $dbh->do('INSERT INTO books (title, author, pages, isbn, year, genre, url, link_image, status, tags,time) 
-	   VALUES (?,?,?,?,?,?,?,?,?,?)',
-	   undef, $book->title, $book->author, $book->pages, $book->isbn, $book->year, $book->genre, 
-	   $book->url, $book->link_image, $book->status, $book->tags,time);
-	
-$dbh->disconnect;
+ my $res = eval {
+	 $dbh->do('INSERT INTO book_id (googleid, nb_pages , author ,title, description,image_link,categories) 
+		 VALUES (?,?,?,?,?,?,?)',  
+		 undef,
+		 $book->googleid,
+		 $book->nb_pages,
+		 $book->author,
+		 $book->title,
+		 $book->description,
+		 $book->image_link,
+		 $book->categories,
+	 );
+ };
+
+ unless ($res) {
+	 warn $@ if ($@ !~ /Duplicate/i);
+ }
+ 
+ $dbh->disconnect;
 }
 
 sub add_user {
@@ -60,26 +74,29 @@ sub add_user {
 
 sub add_book_user {
  my $user = shift;
- my $bookid = shift;
+ my $book = shift; # Book object
  my $status = 'unknown';
  my $category = 'unknown';
  my $rate = -1;
  my $tags = 'unknown';
  my $review = 'unknown';
 
-# Check for correct values in $user and $bookid ? TODO
+# Insert the book in the book_id table
+ add_book_id($book);
 
+# Check for correct values in $user and $bookid ? TODO
  my $dbh = dbconnect();
 
-# Checking that the book is not already in the list 
+# Checking that the book is not already in the user list 
  my $sql = 'SELECT * FROM user_list WHERE googleid = ? AND userid = ? ';
  my $sth = $dbh->prepare($sql);
- $sth->execute($bookid, $user); 
+ $sth->execute($book->googleid, $user); 
  my $row = $sth->fetchrow_array || '';
- $sth->finish();
+ $sth->finish;
+ 
  my $r = 'duplicate';
  if($row eq ''){
- $dbh->do('INSERT INTO user_list (userid,googleid,status,category,rate,tags,review) VALUES (?,?,?,?,?,?,?)', undef, $user, $bookid, $status,$category,$rate,$tags,$review);
+ $dbh->do('INSERT INTO user_list (userid,googleid,status,category,rate,tags,review) VALUES (?,?,?,?,?,?,?)', undef, $user, $book->googleid, $status,$category,$rate,$tags,$review);
   my $r = 'added';
  }
  $dbh->disconnect; 
@@ -109,6 +126,21 @@ sub delete_book_user {
  }
 }
 
+sub get_books_user{
+
+ my $user = shift || 'mehdi@souihed.fr';
+
+ my $dbh = dbconnect();
+
+ my $sql = 'SELECT googleid FROM user_list WHERE userid = ?';
+ my $sth = $dbh->prepare($sql);
+ $sth->execute($user); 
+ my $rows = $sth->fetchall_arrayref || '';
+ $sth->finish;
+ 
+ $dbh->disconnect;
+}
+
 sub login {
  my $email = shift ;
  my $passwd = shift;
@@ -122,10 +154,8 @@ sub login {
  return md5($passwd) eq $row ? 1 : 0;
 };
 
-sub remove_book{};
 sub search_book{};
 sub tag_book{};
-sub add_book_list{};
 sub status_book{};
 
 1;

@@ -27,6 +27,7 @@ get '/add_book' => sub {
 
 post '/add_book' => sub {
 
+
 	my $book = Book->new(
 		title   => params->{title},
 		author  => params->{author},
@@ -39,8 +40,7 @@ post '/add_book' => sub {
 		status  => params->{status},
 		tags    => params->{tags}, 
 	);
-
-	Controller::add_book($book);
+#	Controller::add_book($book);
 
 	redirect '/bookshelf';
 
@@ -89,11 +89,27 @@ post '/results_books' => sub {
 	template 'results_books',{results => $results, search => params->{keyword}} ;
 };
 
+get '/my_books' => sub{
+	my $results = Controller::get_books_user(session('user'));
+
+	template 'my_books', {results => $results};
+
+};
+
 ajax '/user/:action' => sub {
 
 	my $response = undef;
 	if (params->{action} eq 'add_book'){
-		$response = Controller::add_book_user(session('user'),params->{id});
+	my $book = Book->new(
+		googleid   => params->{id},
+		nb_pages   => params->{nb_pages},
+		title   => params->{title},
+		author  => params->{authors},
+	        description => params->{desc},
+		link_image => params->{image_link},
+		categories   => params->{categories},
+	);
+		$response = Controller::add_book_user(session('user'),$book);
 	}
 
 	if (params->{action} eq 'delete_book'){
