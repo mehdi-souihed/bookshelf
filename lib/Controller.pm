@@ -37,7 +37,9 @@ sub add_book_id {
  my $dbh = dbconnect();
  my $res = eval {
          no warnings; 
-	 $dbh->do('INSERT IGNORE INTO book_id (googleid, nb_pages , author ,title, description,image_link,categories) 
+	 $dbh->do('INSERT IGNORE INTO book_id 
+		 (googleid, nb_pages, author,
+		 title, description,image_link,categories) 
 		 VALUES (?,?,?,?,?,?,?)',  
 		 undef,
 		 $book->googleid,
@@ -96,7 +98,10 @@ sub add_book_user {
  
  my $r = 'duplicate';
  if($row eq ''){
- $dbh->do('INSERT INTO user_list (userid,googleid,status,category,rate,tags,review) VALUES (?,?,?,?,?,?,?)', undef, $user, $book->googleid, $status,$category,$rate,$tags,$review);
+ $dbh->do('INSERT INTO user_list 
+	 (userid,googleid,status,category,rate,tags,review) 
+	 VALUES (?,?,?,?,?,?,?)', undef, $user, $book->googleid, 
+	 $status,$category,$rate,$tags,$review);
   my $r = 'added';
  }
  $dbh->disconnect; 
@@ -140,6 +145,26 @@ sub get_books_user{
  $dbh->disconnect;
  return $rows;
 }
+
+sub get_full_info_list_user{
+ my $user = shift || 'mehdi@souihed.fr';
+
+ my $dbh = dbconnect();
+
+ my $sql =   'SELECT user_list.googleid, user_list.status, 
+  		user_list.rate, user_list.review, book_id.author, 
+		book_id.title, book_id.nb_pages, book_id.description, 
+		book_id.categories, book_id.image_link
+	       	FROM user_list, book_id 
+		WHERE user_list.userid = ? 
+		AND user_list.googleid = book_id.googleid';
+ my $sth = $dbh->prepare($sql);
+ $sth->execute($user); 
+ my $rows = $sth->fetchall_arrayref || '';
+ $sth->finish;
+ $dbh->disconnect;
+ return $rows;
+}	
 
 sub login {
  my $email = shift ;

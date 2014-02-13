@@ -10,6 +10,11 @@ use v5.10;
 
 our $VERSION = '0.1';
 
+get '/' => sub {
+
+	redirect '/bookshelf';
+};
+
 get '/bookshelf' => sub {
 	
 	template 'bookshelf_index';
@@ -90,7 +95,7 @@ post '/results_books' => sub {
 };
 
 get '/my_books' => sub{
-	my $results = Controller::get_books_user(session('user'));
+	my $results = Controller::get_full_info_list_user(session('user'));
 
 	template 'my_books', {results => $results};
 
@@ -106,7 +111,7 @@ ajax '/user/:action' => sub {
 		title   => params->{title},
 		author  => params->{authors},
 	        description => params->{desc},
-		link_image => params->{image_link},
+		image_link => params->{image_link},
 		categories   => params->{categories},
 	);
 		$response = Controller::add_book_user(session('user'),$book);

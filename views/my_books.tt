@@ -1,0 +1,43 @@
+<h1>My list of books </h1>
+<!--		   
+<div
+data-googleid="<% result.0 %>"
+data-status="<% result.1 %>"
+data-rate="<% result.2 %>"
+data-review="<% result.3 %>"
+data-author="<% result.4 %>"
+data-title="<% result.5 %>"
+data-nbpages="<% result.6 %>"
+data-desc="<% result.7 %>"
+data-categories="<% result.8 %>"
+data-image_link="<% result.9 %>"
+></div> 
+-->
+		<ul>
+		  <% FOR result IN results %>
+  		  <li class="results">
+		
+		   <div class="book_image"><img src="<% result.9 %>"></div>
+		   </br>
+		   <% IF session.user %>
+		   <input type=button id="myButton" class="inlistButton" value="Remove Book" name="<%result.0%>"/>
+		 <% END %>
+
+		   <a> <% result.5 %> by <% result.4 %></a>
+
+		   <div>Status: <% result.1 %></div>
+		   <div>Rate: <% result.2%></div>
+		   <div>Pages: <% result.6 %></div>
+		   <div>Categories: <% result.8 %> </div>
+		   
+		  <p>Description:  <% result.7 %> </p>
+		  
+		  </li>
+		      		
+		  <% END %>  
+		</ul>
+
+
+
+
+

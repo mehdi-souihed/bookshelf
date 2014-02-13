@@ -7,8 +7,8 @@
 <p> <b><h2>TODO</h2></b> </p>
 <p> [x] Retrieve search from Google API</p>
 <p>   	-->[ ] Put summary, author, number of pages etc.. in results</p>
-<p>   	-->[ ] Select book to add to account
+<p>   	-->[x] Select book to add to account
 <p> [ ] Create user account
-	-->[ ] Store password as md5
-	
+	-->[x] Store password as md5
+	-->[ ] Display user list 	
 <p> [ ] Retrieve number of pages</p>
