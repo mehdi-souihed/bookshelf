@@ -30,13 +30,13 @@ $(document).ready(function(){
 		
 		if(response == 'added'|| response == 'duplicate'){
 			$(this).toggleClass("buttonDown");
-			$(this).val('Remove book');
+			$(this).val('Remove Book');
 		}
 
 
 		if(response == 'deleted'){
 			$(this).toggleClass("buttonDown");
-			$(this).val('Add book');
+			$(this).val('Add Book');
 		}
 
 

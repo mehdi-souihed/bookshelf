@@ -84,7 +84,7 @@ get '/search_book' => sub {
 };
 
 post '/results_books' => sub {
-	my $results = GoogleApi::search_book(params->{keyword});
+	my $results = GoogleApi::search_book(params->{keyword}, session('user'));
 
 	template 'results_books',{results => $results, search => params->{keyword}} ;
 };

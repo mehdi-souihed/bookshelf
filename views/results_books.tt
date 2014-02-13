@@ -18,9 +18,13 @@ data-categories="<% FOREACH cat IN result.volumeInfo.categories %>
 	<% cat %>
 	<% END %>"
 ></div>
+			<% IF result.inlist %>
 
+		   <input type=button id="myButton" class="inlistButton" value="Remove Book" name="<%result.id%>"/>
+			<% ELSE %>
 		   <input type=button id="myButton" class="myButton" value="Add Book" name="<%result.id%>"/>
- 		   <% END %>
+ 		 	<% END %>  
+		 <% END %>
 
 		   <a href="#"> <% result.volumeInfo.title %> </a>
 

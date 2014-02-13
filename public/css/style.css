@@ -259,6 +259,22 @@ li.results a.results:hover {
 	text-decoration:none;
 	text-shadow:0px 0px 4px #2f6627;
 }
+.inlistButton {
+	background-color:#00f;
+	-moz-border-radius:35px;
+	-webkit-border-radius:35px;
+	border-radius:35px;
+	border:3px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Verdana;
+	font-size:10px;
+	font-weight:bold;
+	padding:9px 12px;
+	text-decoration:none;
+	text-shadow:0px 0px 4px #2f6627;
+}
 .buttonDown {
 	background-color:#00f;
 }

@@ -2,8 +2,7 @@ package Controller;
 
 
 use strict;
-use warnings;
-
+use warnings ;
 use Moose;
 use DBI;
 use User;
@@ -34,10 +33,11 @@ sub add_book_id {
  if(!is_a($book, 'Book')){
     die 'must have a Book object as parameter';
   }
- 
+
  my $dbh = dbconnect();
  my $res = eval {
-	 $dbh->do('INSERT INTO book_id (googleid, nb_pages , author ,title, description,image_link,categories) 
+         no warnings; 
+	 $dbh->do('INSERT IGNORE INTO book_id (googleid, nb_pages , author ,title, description,image_link,categories) 
 		 VALUES (?,?,?,?,?,?,?)',  
 		 undef,
 		 $book->googleid,
@@ -46,12 +46,12 @@ sub add_book_id {
 		 $book->title,
 		 $book->description,
 		 $book->image_link,
-		 $book->categories,
-	 );
+		 $book->categories
+	 )
  };
 
  unless ($res) {
-	 warn $@ if ($@ !~ /Duplicate/i);
+	 warn "ERROR in DBI: ".$@ if ($@ !~ /Duplicate/i);
  }
  
  $dbh->disconnect;
@@ -137,8 +137,8 @@ sub get_books_user{
  $sth->execute($user); 
  my $rows = $sth->fetchall_arrayref || '';
  $sth->finish;
- 
  $dbh->disconnect;
+ return $rows;
 }
 
 sub login {
