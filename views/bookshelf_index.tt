@@ -7,8 +7,21 @@
 <p> <b><h2>TODO</h2></b> </p>
 <p> [x] Retrieve search from Google API</p>
 <p>   	-->[ ] Put summary, author, number of pages etc.. in results</p>
-<p>   	-->[x] Select book to add to account
-<p> [ ] Create user account
-	-->[x] Store password as md5
-	-->[ ] Display user list 	
-<p> [ ] Retrieve number of pages</p>
+<p>   	-->[x] Select book to add to account</p>
+<p> [ ] Create user account</p>
+<p>	-->[x] Store password as md5</p>
+<p>	-->[x] Display user list</p>
+<p>		--> Give status to book</p>
+<p>		--> Write review</p>
+<p>		--> Calculate number of pages read</p>
+<p>		--> Tag book </p>
+<p>		--> Rate book</p>
+<p>		--> Better layout</p>
+	
+<p><b> Build a list of books and try to get a recommandation </b></p>
+
+<p>	-->[ ] Using google prediction ?</p>
+<p>	-->[ ] Other ?</p>
+
+<p>Re-implement in Graph database like No4j or MongoDB</p>
+	

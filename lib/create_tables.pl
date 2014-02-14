@@ -32,7 +32,7 @@ date timestamp default current_timestamp
 )
 END_SQL
 
-    warn "Could not create book_id table" unless ($dbh->do($sql));
+#    warn "Could not create book_id table" unless ($dbh->do($sql));
 
  $sql = <<'END_SQL';
 CREATE TABLE user_list (
@@ -44,6 +44,7 @@ category VARCHAR(100),
 rate INTEGER,
 tags  VARCHAR(255),
 review VARCHAR(5000),
+visible BOOLEAN default true,
 date timestamp default current_timestamp
 )
 END_SQL

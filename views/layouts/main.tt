@@ -15,21 +15,37 @@
 
 </head>
 <body>
+	<form method="post" action="/results_books">
+		<label class="description" for="title">Quick Search </label>
+		<div>
+			<input id="keyword" name="keyword" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div> 
 
-	<div style="clear: both;"></div>
+		<input id="saveForm" class="button_text" type="submit" name="submit" value="Submit" />
+	</form>
+
+
 	<div id="navbar"> 
 		<ul>
 		    <li id="navbar">
 	<% IF session.user %>
-	Hi <% session.user %> ! 				
+		Hi <% session.user %> ! 
+	<p> <a href="/logout"> Logout</a> </p>
+
 	<% ELSE %>
 	<a href="/login">Login</a> or <a href="/add_user">Signup</a>
 	<% END %>
 	</li>
 		</ul>
         </div>
-
-<% content %>
+	</br>
+	<a href="/bookshelf"> Home </a>
+	<p></p>
+	<a href="/my_books"> My Books </a>
+	<div id="content">
+	
+	<% content %>
+</div>
 <div id="footer">
 Powered by <a href="http://perldancer.org/">Dancer</a> <% dancer_version %>
 </div>

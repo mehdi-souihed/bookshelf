@@ -1,5 +1,15 @@
+<% IF session.user %>
 <h1>My list of books </h1>
-<!--		   
+
+<div class="book_info">
+<p> Books in list <b><% nb_results %> </b></p>
+<p> Books read</p>
+<p> Books  to read</p>
+<p> Pages read </p>
+
+</div>
+
+<!-- reference for each number		   
 <div
 data-googleid="<% result.0 %>"
 data-status="<% result.1 %>"
@@ -16,12 +26,12 @@ data-image_link="<% result.9 %>"
 		<ul>
 		  <% FOR result IN results %>
   		  <li class="results">
-		
 		   <div class="book_image"><img src="<% result.9 %>"></div>
 		   </br>
-		   <% IF session.user %>
-		   <input type=button id="myButton" class="inlistButton" value="Remove Book" name="<%result.0%>"/>
-		 <% END %>
+		  <div
+		  data-googleid="<% result.0 %>"
+		  ></div>
+		   <input type=button id="myListButton" class="inlistButton" value="Remove Book" name="<%result.0%>"/>
 
 		   <a> <% result.5 %> by <% result.4 %></a>
 
@@ -30,14 +40,13 @@ data-image_link="<% result.9 %>"
 		   <div>Pages: <% result.6 %></div>
 		   <div>Categories: <% result.8 %> </div>
 		   
-		  <p>Description:  <% result.7 %> </p>
+		  <!-- <p>Description:  <% result.7 %> </p> -->
 		  
 		  </li>
 		      		
 		  <% END %>  
 		</ul>
-
-
+<% END %>
 
 
 

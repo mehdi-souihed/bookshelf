@@ -74,6 +74,12 @@ get '/login' => sub {
 	template 'login';
 };
 
+get '/logout' => sub {
+	session->destroy;
+	redirect '/bookshelf';
+
+};
+
 post '/login' => sub {
 #	Validate the username and password 
 	if(Controller::login(params->{email}, params->{upass})){ 
@@ -97,8 +103,7 @@ post '/results_books' => sub {
 get '/my_books' => sub{
 	my $results = Controller::get_full_info_list_user(session('user'));
 
-	template 'my_books', {results => $results};
-
+	template 'my_books', {results => $results, nb_results => scalar @{$results}};
 };
 
 ajax '/user/:action' => sub {
@@ -115,6 +120,14 @@ ajax '/user/:action' => sub {
 		categories   => params->{categories},
 	);
 		$response = Controller::add_book_user(session('user'),$book);
+	}
+
+	if (params->{action} eq 'make_book_visible'){
+		$response =  Controller::delete_book_user(session('user'),params->{id});
+	}
+
+	if (params->{action} eq 'make_book_invisible'){
+		$response =  Controller::delete_book_user(session('user'),params->{id});
 	}
 
 	if (params->{action} eq 'delete_book'){

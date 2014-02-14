@@ -3,7 +3,6 @@ package Controller;
 
 use strict;
 use warnings ;
-use Moose;
 use DBI;
 use User;
 use Book;
@@ -109,26 +108,18 @@ sub add_book_user {
 }
 
 sub delete_book_user {
- my $user = shift;
- my $bookid = shift;
-
-# Check for correct values in $user and $bookid ? TODO
+ my $user = shift or die "You must specify a user";
+ my $bookid = shift or die "You must specify a bookid";
 
  my $dbh = dbconnect();
 
-# Checking that the book is not already in the list 
- my $sql = 'SELECT googleid FROM user_list WHERE googleid = ? AND userid = ?';
+ my $sql = 'DELETE FROM user_list WHERE googleid = ? AND userid = ?';
  my $sth = $dbh->prepare($sql);
- $sth->execute($bookid, $user); 
- my $row = $sth->fetchrow_array || '';
- my $r = 'error while deleting';
- if($row ne ''){
- $sql = 'DELETE FROM user_list WHERE googleid = ? AND userid = ?';
- $sth =  $dbh->prepare($sql);
- $r = 'deleted' if( $sth->execute($bookid, $user));
+ my $response = 'error while deleting';
+ $response = 'deleted' if($sth->execute($bookid, $user)); 
  $dbh->disconnect;
- return $r; 
- }
+ return $response; 
+ 
 }
 
 sub get_books_user{
@@ -154,7 +145,7 @@ sub get_full_info_list_user{
  my $sql =   'SELECT user_list.googleid, user_list.status, 
   		user_list.rate, user_list.review, book_id.author, 
 		book_id.title, book_id.nb_pages, book_id.description, 
-		book_id.categories, book_id.image_link
+		book_id.categories, book_id.image_link, user_list.tags
 	       	FROM user_list, book_id 
 		WHERE user_list.userid = ? 
 		AND user_list.googleid = book_id.googleid';
@@ -175,11 +166,11 @@ sub login {
  my $sth = $dbh->prepare($sql);
  $sth->execute($email); 
  my $row = $sth->fetchrow_array || '';
+ $sth->finish;
  $dbh->disconnect;
  return md5($passwd) eq $row ? 1 : 0;
 };
 
-sub search_book{};
 sub tag_book{};
 sub status_book{};
 
