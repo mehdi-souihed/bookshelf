@@ -1,7 +1,8 @@
 package Web;
 use Dancer ':syntax';
 use Dancer::Plugin::Ajax;
-use Controller;
+use Controller::Book;
+use Controller::User;
 use Book;
 use GoogleApi;
 use Data::Dumper;
@@ -64,7 +65,7 @@ post '/add_user' => sub {
 		user_password    => params->{upass},
 	);
 
-	Controller::add_user($user);
+	Controller::User->add_user($user);
 
 	redirect '/bookshelf';
 
@@ -81,8 +82,8 @@ get '/logout' => sub {
 };
 
 post '/login' => sub {
-#	Validate the username and password 
-	if(Controller::login(params->{email}, params->{upass})){ 
+#	Validating the username and password 
+	if(Controller::User->login(params->{email}, params->{upass})){ 
 		session user => params->{email};
 		redirect '/bookshelf'; 	
 	}
@@ -101,7 +102,7 @@ post '/results_books' => sub {
 };
 
 get '/my_books' => sub{
-	my $results = Controller::get_full_info_list_user(session('user'));
+	my $results = Controller::User->get_full_info_list_user(session('user'));
 
 	template 'my_books', {results => $results, nb_results => scalar @{$results}};
 };
@@ -119,19 +120,20 @@ ajax '/user/:action' => sub {
 		image_link => params->{image_link},
 		categories   => params->{categories},
 	);
-		$response = Controller::add_book_user(session('user'),$book);
+	#TODO change to $book->add_book_user(session('user'));
+		$response = Controller::Book->add_book_user(session('user'),$book);
 	}
 
 	if (params->{action} eq 'make_book_visible'){
-		$response =  Controller::delete_book_user(session('user'),params->{id});
+		$response =  Controller::Book->delete_book_user(session('user'),params->{id});
 	}
 
 	if (params->{action} eq 'make_book_invisible'){
-		$response =  Controller::delete_book_user(session('user'),params->{id});
+		$response =  Controller::Book->delete_book_user(session('user'),params->{id});
 	}
 
 	if (params->{action} eq 'delete_book'){
-		$response =  Controller::delete_book_user(session('user'),params->{id});
+		$response =  Controller::Book->delete_book_user(session('user'),params->{id});
 	}
 		header('Content-Type' => 'text/plain');
 		header('Cache-Control' =>  'no-store, no-cache, must-revalidate');

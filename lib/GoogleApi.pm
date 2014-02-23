@@ -30,7 +30,7 @@ sub search_book{
 
 	my $results = decode_json($res->decoded_content);
 
-	my $list = Controller::get_books_user($userid);
+	my $list = Controller::Book->get_books_user($userid);
 	my @flat_list = map {@$_} @$list;
 	my %tmp = @{$results->{items}};
 	#my @tmp  = map {$_->{id} ~~ @flat_list?  ($_->{status} = 1) : ($_->{status} = 0)}   @{$results->{items}};

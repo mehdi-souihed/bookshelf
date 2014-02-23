@@ -13,7 +13,7 @@ data-authors="<% FOREACH person IN result.volumeInfo.authors %>
 	<% END %>"
 data-title="<% result.volumeInfo.title %>"
 data-desc="<% result.volumeInfo.description %>"
-data-image_link="<% result.volumeInfo.imageLinks.smallThumbnail	 %>"
+data-image_link="<% result.volumeInfo.imageLinks.thumbnail %>"
 data-categories="<% FOREACH cat IN result.volumeInfo.categories %>
 	<% cat %>
 	<% END %>"
@@ -28,7 +28,7 @@ data-categories="<% FOREACH cat IN result.volumeInfo.categories %>
 
 		   <a href="#"> <% result.volumeInfo.title %> </a>
 
-		   <img src="<% result.volumeInfo.imageLinks.smallThumbnail%>">	
+		   <img src="<% result.volumeInfo.imageLinks.thumbnail %>">	
 		   
 		   <% result.searchInfo.textSnippet %>
 		  

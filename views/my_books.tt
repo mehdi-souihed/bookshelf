@@ -26,6 +26,7 @@ data-image_link="<% result.9 %>"
 		<ul>
 		  <% FOR result IN results %>
   		  <li class="results">
+            <div class="col-6 col-sm-6 col-lg-4">
 		   <div class="book_image"><img src="<% result.9 %>"></div>
 		   </br>
 		  <div
@@ -41,7 +42,7 @@ data-image_link="<% result.9 %>"
 		   <div>Categories: <% result.8 %> </div>
 		   
 		  <!-- <p>Description:  <% result.7 %> </p> -->
-		  
+	</div>	  
 		  </li>
 		      		
 		  <% END %>  
